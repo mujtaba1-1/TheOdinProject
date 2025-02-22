@@ -19,6 +19,10 @@ let isColorMode = true;
 let isRainbowMode = false;
 let isEraser = false;
 
+// Initial State
+setBtnColor(colorBtn)
+
+// Functions
 function addCell() {
     for (let i = 0; i < slider.value ** 2; i++) {
         const gridCell = document.createElement("div");
