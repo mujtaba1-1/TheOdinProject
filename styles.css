@@ -93,14 +93,6 @@ main {
     stroke: #c8a165;
 }
 
-#book-filter svg {
-    stroke: #DCD9BC;
-}
-
-#book-filter svg:hover {
-    stroke: #c8a165;
-}
-
 /* Bookshelf */
 
 #bookshelf {
@@ -124,6 +116,21 @@ main {
     background: linear-gradient(145deg, #7b5e57, #5d4037);
     border-radius: 8px;
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.close-btn {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.close-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: #f5deb3;
+    vertical-align: middle;
 }
 
 .spine {
@@ -181,4 +188,73 @@ main {
     border: 3px solid #c8a165;
     border-radius: 6px;
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Add Book Dialog */
+
+dialog {
+    background-color: #F5D3A2;
+    border: 2px solid #8b4513;
+    border-radius: 10px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Macondo', cursive;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 600px;
+    max-width: 90%;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#book-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #8b4513;
+    font-size: 1.2rem;
+}
+
+#book-form input[type="text"],
+#book-form input[type="checkbox"] {
+    display: block;
+    margin-bottom: 25px;
+    padding: 10px;
+    border: 1px solid #8b4513;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+#book-form input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-left: 10px;
+}
+
+#book-form .button {
+    background-color: #8b4513;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Macondo', cursive;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#book-form .button:hover {
+    background-color: #a0522d;
+    transform: scale(1.05);
+}
+
+#book-form label[for="book-read"] {
+    display: inline-block;
+    margin-bottom: 0;
 }
