@@ -1,0 +1,184 @@
+/* Global Reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    background: url('https://www.toptal.com/designers/subtlepatterns/uploads/wood_pattern.png'); 
+    background-attachment: fixed; 
+    font-family: "Macondo", sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100px;
+    background-color: #5C3526;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    border-bottom: 4px solid #3E241B; 
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+}
+
+header svg {
+    height: 50px;
+    width: 50px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3)); 
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+/* User Panel */
+#user-panel {
+    width: 150px;
+    background-color: #5C3526;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 40px;
+    border-right: 4px solid #3E241B;
+}
+
+/* User Panel Buttons */
+.action {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+.action:hover {
+    background-color: #6F4335;
+    transform: scale(1.1);
+}
+
+#user-panel svg {
+    height: 55px;
+    width: 55px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Individual SVG Styles */
+
+#add-book svg {
+    fill: #DCD9BC;
+}
+
+#add-book svg:hover {
+    fill: #c8a165;
+}
+
+#search-book svg {
+    stroke: #DCD9BC;
+}
+
+#search-book svg:hover {
+    stroke: #c8a165;
+}
+
+#book-filter svg {
+    stroke: #DCD9BC;
+}
+
+#book-filter svg:hover {
+    stroke: #c8a165;
+}
+
+/* Bookshelf */
+
+#bookshelf {
+    height: calc(100vh - 100px);
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+/* Book */
+
+.book {
+    display: flex;
+    width: 280px;
+    height: 350px;
+    position: relative;
+    background: linear-gradient(145deg, #7b5e57, #5d4037);
+    border-radius: 8px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.spine {
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(to right, #3e2723, #5d4037);
+    box-shadow: inset -3px 0 5px rgba(0, 0, 0, 0.6);
+    border-right: 2px solid #c8a165;
+    border-radius: 8px 0 0 8px;
+}
+
+.book-cover {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(145deg, #7b5e57, #5d4037);
+}
+
+.book-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #f5deb3;
+    padding: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+.book-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.read svg {
+    width: 1.5rem;
+    height: auto;
+    stroke: #f5deb3;
+    vertical-align: middle;
+}
+
+.book-author {
+    font-size: 20px;
+}
+
+.decorative-border {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 3px solid #c8a165;
+    border-radius: 6px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
