@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library</title>
+</head>
+<body>
+    <header>
+        <h1>The Scriptorium of Ages</h1>
+        <svg viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="#FF9800"> <rect x="1" y="38" width="46" height="2"></rect> <rect x="25" y="18" width="4" height="16"></rect> <rect x="31" y="18" width="4" height="16"></rect> <rect x="37" y="18" width="4" height="16"></rect> <rect x="19" y="18" width="4" height="16"></rect> <rect x="13" y="18" width="4" height="16"></rect> <rect x="7" y="18" width="4" height="16"></rect> <polygon points="43,16 5,16 5,13 24,4 43,13"></polygon> <rect x="5" y="34" width="38" height="2"></rect> </g> <g fill="#EF6C00"> <rect x="25" y="16" width="4" height="2"></rect> <rect x="31" y="16" width="4" height="2"></rect> <rect x="37" y="16" width="4" height="2"></rect> <rect x="19" y="16" width="4" height="2"></rect> <rect x="13" y="16" width="4" height="2"></rect> <rect x="7" y="16" width="4" height="2"></rect> <rect x="3" y="36" width="42" height="2"></rect> <circle cx="24" cy="11" r="2"></circle> </g> </g></svg>
+    </header>
+    <main>
+        <aside id="user-panel">
+            <div id="add-book" class="action">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>book-plus-multiple</title><path d="M13.09 20H5V6H3V20A2 2 0 0 0 5 22H13.81A5.5 5.5 0 0 1 13.09 20M19 2H14V7L12 5.5L10 7V2H9A2 2 0 0 0 7 4V16A2 2 0 0 0 9 18H13.09A6 6 0 0 1 21 13.34V4A2 2 0 0 0 19 2M20 15V18H23V20H20V23H18V20H15V18H18V15Z"></path></svg>
+            </div>
+            <div id="search-book" class="action">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16.6725 16.6412L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+        </aside>
+        <div id="bookshelf">
+        </div>
+    </main>
+    <dialog id="add-book-dialog">
+        <form id="book-form">
+            <label for="book-name">Book Name:</label>
+            <input type="text" id="book-name" name="book-name" required>
+
+            <label for="book-author">Author:</label>
+            <input type="text" id="book-author" name="book-author" required>
+
+            <div id="read-container">
+                <label for="book-read">Read:</label>
+                <input type="checkbox" id="book-read" name="book-read">
+            </div>
+
+            <input class="button" type="submit" id="submit" value="Add Book">
+            <input class="button" type="button" id="cancel-button" formmethod="dialog" value="Cancel">
+        </form>
+    </dialog>
+</body>
+<script src="script.js"></script>
+</html>
